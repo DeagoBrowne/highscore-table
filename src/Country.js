@@ -3,10 +3,10 @@ import React from "react"
 function Country({ data }) {
 
   data.scores.sort((a, b) => {
-    if (a.s < b.s) {
+    if (a.s > b.s) {
       return -1;
     }
-    if (a.s > b.s) {
+    if (a.s < b.s) {
       return 1;
     }
     return 0;
