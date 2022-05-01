@@ -1,11 +1,25 @@
 .table {
-  margin-left: 30%;
-  margin-right: 30%;
+  background-color: rgb(166, 199, 188);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  margin-left: 20%;
+  margin-right: 20%;
   border-width: 10px;
   border-color: black;
   border-style: solid;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-color: rgb(158, 158, 196);
+  border-style: solid;
+  border-width: 2px;
 }
