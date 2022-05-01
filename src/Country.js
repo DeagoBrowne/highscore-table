@@ -1,6 +1,17 @@
 import React from "react"
 
 function Country({ data }) {
+
+  data.scores.sort((a, b) => {
+    if (a.s < b.s) {
+      return -1;
+    }
+    if (a.s > b.s) {
+      return 1;
+    }
+    return 0;
+  })
+
   return (
     <>
       {data.scores.map((data, index) => {

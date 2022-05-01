@@ -16,6 +16,7 @@ let Table = ({ scores }) => {
 
   return (
     <div className="table">
+      <caption>Country High Scores</caption>
       {scores.map((data, index) => {
         return (
           <table key={index}>
