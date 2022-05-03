@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Country from "./Country";
 
 
 let Table = ({ scores }) => {
+
+  const [descending, setDescending] = useState(true);
+
+  function buttonToggle() {
+    setDescending(!descending)
+  }
 
   scores.sort((a, b) => {
     if (a.name < b.name) {
@@ -16,7 +22,10 @@ let Table = ({ scores }) => {
 
   return (
     <div className="table">
-      <caption>Country High Scores</caption>
+      <div className="titleNButton">
+        <caption>World High Scores</caption>
+        <button onClick={buttonToggle}>Change Order</button>
+      </div>
       {scores.map((data, index) => {
         return (
           <table key={index}>
@@ -28,7 +37,7 @@ let Table = ({ scores }) => {
               </tr>
             </thead>
             <tbody>
-              <Country data={data} key={index} />
+              <Country descending={descending} data={data} key={index} />
             </tbody>
           </table>
         )

@@ -1,13 +1,14 @@
 import React from "react"
 
-function Country({ data }) {
+function Country({ data, descending }) {
+
 
   data.scores.sort((a, b) => {
     if (a.s > b.s) {
-      return -1;
+      return descending ? -1 : 1;
     }
     if (a.s < b.s) {
-      return 1;
+      return descending ? 1 : -1;
     }
     return 0;
   })
